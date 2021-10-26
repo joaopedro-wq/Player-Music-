@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #ddd;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(images/fundo.jpg) no-repeat center/cover;
+  min-height: 812px;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.idImg {
+  height: 300;
+  width: 300px;
+}
+h2 {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.desc {
+  width: 300px;
+}
+
+.duration {
+  width: 300px;
+  margin-top: 20px;
+
+  height: 6px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.temp {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+progress {
+  height: 6px;
+  width: 0%;
+}
+
+.ponto {
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+
+.play {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.buttonPlay,
+.buttonPause {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.prox {
+  font-size: 40px;
+  cursor: pointer;
+}
+.buttonPause {
+  display: none;
+}
+ul {
+  height: 5px;
+  width: 5px;
+  margin-top: 10rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+@keyframes sacudir {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@keyframes icons {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    t-webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+.instagram {
+  background: #f18f1801;
+}
+.instagram:hover {
+  animation: icons 2.5s;
+}
+.facebook {
+  background: #f18f1801;
+}
+.facebook:hover {
+  animation: icons 2.5s;
+}
+.github {
+  background: #f18f1801;
+}
+.github:hover {
+  animation: icons 2.5s;
+}
+
+.linkedin {
+  background: #f18f1801;
+}
+.linkedin:hover {
+  animation: icons 2.5s;
+}
+
+.twitter {
+  background: #f18f1801;
+}
+.twitter:hover {
+  animation: icons 5s;
+}
+
+.prox:hover {
+  animation: sacudir 2s ease 0s 1 alternate-reverse both;
+}
+
+.buttonPause:hover {
+  animation: sacudir 2s ease 0s 1 alternate-reverse both;
+}
+
+.buttonPlay:hover {
+  animation: sacudir 2s ease 0s 1 alternate-reverse both;
+}
+@media (min-width: 720px) {
+  body {
+    background-color: #121214;
+    background-image: url(images/background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  main {
+    width: 358px;
+    height: 541px;
+    min-height: 600px;
+    margin: auto;
+
+    background: url(images/background.svg) no-repeat center/cover;
+  }
+
+  .hole {
+    position: absolute;
+    background: #121214;
+    width: 100px;
+    height: 8px;
+    margin-top: 18px;
+    margin-left: 137px;
+  }
+}
